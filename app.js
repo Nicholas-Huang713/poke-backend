@@ -33,7 +33,7 @@ app.use(express.urlencoded({extended: false}));
 // app.use(bodyParser.json())
 app.use(cors());
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
     res.json({msg: 'Lets Go Nick!!'})
 })
 // app.use('/api', routes);
