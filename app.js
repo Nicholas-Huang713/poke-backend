@@ -7,10 +7,10 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+dotenv.config();
+const PORT = process.env.PORT || 3000;
 
 // const routes = require('./routes/api');
-dotenv.config();
 
 // mongoose.connect( 
     //     process.env.MONGODB_URI || 
