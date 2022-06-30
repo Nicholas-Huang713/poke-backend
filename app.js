@@ -26,8 +26,8 @@ dotenv.config();
             //     console.log("Mongoose is connected!")
             // })
             
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+// app.use(express.json());
+// app.use(express.urlencoded({extended: false}));
 // // app.use(express.static(path.resolve('..', 'client', 'build'))); 
 // app.use(bodyParser.urlencoded({ extended: true }))
 // app.use(bodyParser.json())
