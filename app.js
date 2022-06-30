@@ -1,7 +1,7 @@
 const express = require("express");
 // const mongoose = require('mongoose');
 // // const morgan = require('morgan');
-// const path = require('path');
+const path = require('path');
 const dotenv = require('dotenv');
 // const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -33,7 +33,7 @@ app.use(express.urlencoded({extended: false}));
 // app.use(bodyParser.json())
 app.use(cors());
 
-app.get('/api/', (req, res) => {
+app.get('/api', (req, res) => {
     res.json({msg: 'Lets Go Nick!!'})
 })
 // app.use('/api', routes);
@@ -44,12 +44,13 @@ app.get('/api/', (req, res) => {
     //     app.use(express.static('client/build'));
     // }
     
-    // app.get('/*', function(req, res) {
-    //     res.sendFile(path.join(__dirname, './poke-frontend/build/index.html'), function(err) {
-    //         if (err) {
-    //             res.status(500).send(err)
-    //         }
-    //     })
-    // });
+    app.get('/*', function(req, res) {
+    //     res.sendFile(path.join(__dirname, '../frontend/build/index.html'), function(err) {
+        res.sendFile(path.join(__dirname, '../frontend/_work/poke-frontend/poke-frontend/build/index.html'), function(err) {
+            if (err) {
+                res.status(500).send(err)
+            }
+        })
+    });
     
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
