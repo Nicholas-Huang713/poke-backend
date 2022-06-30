@@ -44,12 +44,12 @@ app.get('/api/', (req, res) => {
     //     app.use(express.static('client/build'));
     // }
     
-    app.get('/*', function(req, res) {
-        res.sendFile(path.join(__dirname, './poke-frontend/build/index.html'), function(err) {
-            if (err) {
-                res.status(500).send(err)
-            }
-        })
-    });
+    // app.get('/*', function(req, res) {
+    //     res.sendFile(path.join(__dirname, './poke-frontend/build/index.html'), function(err) {
+    //         if (err) {
+    //             res.status(500).send(err)
+    //         }
+    //     })
+    // });
     
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
