@@ -1,9 +1,9 @@
 const express = require("express");
 // const mongoose = require('mongoose');
 // // const morgan = require('morgan');
-const path = require('path');
+// const path = require('path');
 const dotenv = require('dotenv');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
@@ -29,8 +29,8 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 // // app.use(express.static(path.resolve('..', 'client', 'build'))); 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({ extended: true }))
+// app.use(bodyParser.json())
 app.use(cors());
 
 app.get('/api/', (req, res) => {
@@ -52,4 +52,4 @@ app.get('/api/', (req, res) => {
     //     })
     // });
     
-    app.listen(PORT, console.log(`Server is starting at ${PORT}`));
+app.listen(PORT, console.log(`Server is starting at ${PORT}`));
