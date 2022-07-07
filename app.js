@@ -18,19 +18,19 @@ const PORT = process.env.PORT || 3000;
 
 
 const routes = require('./routes/api');
-mongoose.connect( 
-    process.env.MONGODB_URI || 
-    process.env.DB_CONNECT,
-    {
-        useNewUrlParser: true, 
-        useUnifiedTopology: true
-    },
-    () => console.log('connected to db!')
-);
+// mongoose.connect( 
+//     process.env.MONGODB_URI || 
+//     process.env.DB_CONNECT,
+//     {
+//         useNewUrlParser: true, 
+//         useUnifiedTopology: true
+//     },
+//     () => console.log('connected to db!')
+// );
         
-    mongoose.connection.on('connected', () => {
-        console.log("Mongoose is connected!")
-    })
+//     mongoose.connection.on('connected', () => {
+//         console.log("Mongoose is connected!")
+//     })
             
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
