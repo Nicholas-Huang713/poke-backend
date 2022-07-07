@@ -39,9 +39,9 @@ app.use(express.urlencoded({extended: false}));
 // app.use(bodyParser.json())
 app.use(cors());
 
-// app.get('/', (req, res) => {
-//     res.json({msg: 'Lets Go Nick!!'})
-// })
+app.get('/', (req, res) => {
+    res.json({msg: 'Lets Go Nick!!'})
+})
 app.use('/', routes);
 
 // app.use(morgan('tiny'));
