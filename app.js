@@ -10,14 +10,14 @@ const cors = require('cors');
 
 const app = express();
 
-dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
+// dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 console.log(process.env.NODE_ENV)
-// dotenv.config();
+dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
 
-const routes = require('./routes/api');
+// const routes = require('./routes/api');
 // mongoose.connect( 
 //     process.env.MONGODB_URI || 
 //     process.env.DB_CONNECT,
