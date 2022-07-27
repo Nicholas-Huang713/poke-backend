@@ -45,17 +45,17 @@ app.get('/', (req, res) => {
 
 // app.use(morgan('tiny'));
 
-if(process.env.NODE_ENV === 'production'){
-        app.use(express.static('client/build'));
-    }
+// if(process.env.NODE_ENV === 'production'){
+//         app.use(express.static('client/build'));
+//     }
     
-    app.get('/*', function(req, res) {
-    //     res.sendFile(path.join(__dirname, '../frontend/build/index.html'), function(err) {
-        res.sendFile(path.join(__dirname, '../frontend/_work/poke-frontend/poke-frontend/build/index.html'), function(err) {
-            if (err) {
-                res.status(500).send(err)
-            }
-        })
-    });
+//     app.get('/*', function(req, res) {
+//     //     res.sendFile(path.join(__dirname, '../frontend/build/index.html'), function(err) {
+//         res.sendFile(path.join(__dirname, '../frontend/_work/poke-frontend/poke-frontend/build/index.html'), function(err) {
+//             if (err) {
+//                 res.status(500).send(err)
+//             }
+//         })
+//     });
     
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
