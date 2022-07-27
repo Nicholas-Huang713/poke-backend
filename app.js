@@ -40,7 +40,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.json({msg: 'Lets Go Nick!!'})
+    res.json({msg: 'Lets Go Nick!!!'})
 })
 // app.use('/', routes);
 
